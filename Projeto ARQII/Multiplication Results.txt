@@ -1,0 +1,83 @@
+1e3(1000) Multiplicações aplicadas
+Elementos rândomicos
+Testados em um Processador i5-2400 3.10GHZ Windows 10 Build 1903. 
+18/09/2019
+
+#Execução sequencial#
+Não Otimizado (Column Wise)
+250x250 ---- AVG Time - 91.89 ms
+200x200 ---- AVG Time - 40.842 ms
+150x150 ---- AVG Time - 16.147 ms
+100x100 ---- AVG Time - 4.819 ms
+50x50   ---- AVG Time - 0.597 ms
+30x30   ---- AVG Time - 0.127 ms
+10x10	---- AVG Time - 0.007 ms
+5x5     ---- AVG Time - 0.001 ms
+2x2     ---- AVG Time - 0 ms
+
+
+Otimizado (Row Wise, Array Merge)
+250x250 ---- AVG Time - 72.844 ms
+200x200 ---- AVG Time - 36.848 ms
+150x150 ---- AVG Time - 15.914 ms
+100x100 ---- AVG Time - 4.786 ms
+50x50   ---- AVG Time - 0.593 ms
+30x30   ---- AVG Time - 0.122 ms
+10x10	---- AVG Time - 0.006 ms
+5x5     ---- AVG Time - 0.00034 ms
+2x2     ---- AVG Time - 0 ms
+
+
+#Execução em Paralelo#
+1e3(1000) Multiplicações aplicadas
+Elementos rândomicos
+
+*4 Threads*
+250x250 ---- AVG Time - 20.341 ms
+200x200 ---- AVG Time - 12.102 ms
+150x150 ---- AVG Time - 5.72 ms
+100x100 ---- AVG Time - 2.038 ms
+50x50   ---- AVG Time - 0.674 ms
+30x30   ---- AVG Time - 0.459 ms
+10x10	---- AVG Time - 0.554 ms
+5x5     ---- AVG Time - 0.544 ms
+2x2     ---- AVG Time - 0.538 ms
+
+*3 Threads*
+250x250 ---- AVG Time - 28.069 ms
+200x200 ---- AVG Time - 14.587 ms
+150x150 ---- AVG Time - 6.191 ms
+100x100 ---- AVG Time - 2.171 ms
+50x50   ---- AVG Time - 0.693 ms
+30x30   ---- AVG Time - 0.47  ms
+10x10	---- AVG Time - 0.451 ms
+5x5     ---- AVG Time - 0.427 ms
+2x2     ---- AVG Time - 0.385 ms
+
+*2 Threads*
+250x250 ---- AVG Time - 43.736 ms
+200x200 ---- AVG Time - 20.719 ms
+150x150 ---- AVG Time - 8.708 ms
+100x100 ---- AVG Time - 2.85 ms
+50x50   ---- AVG Time - 0.704 ms
+30x30   ---- AVG Time - 0.375 ms
+10x10	---- AVG Time - 0.349 ms
+5x5     ---- AVG Time - 0.335 ms
+2x2     ---- AVG Time - 0.323 ms
+
+*1 Thread*
+250x250 ---- AVG Time - 77.425 ms
+200x200 ---- AVG Time - 39.841 ms
+150x150 ---- AVG Time - 16.836 ms
+100x100 ---- AVG Time - 5.247 ms
+50x50   ---- AVG Time - 0.904 ms
+30x30   ---- AVG Time - 0.741 ms
+10x10	---- AVG Time - 0.258 ms
+5x5     ---- AVG Time - 0.244 ms
+2x2     ---- AVG Time - 0.229 ms
+
+
+
+
+
+
