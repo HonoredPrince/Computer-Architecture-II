@@ -4,7 +4,7 @@
 #include <thread>
 #include <windows.h>
 
-//Vari·veis globais, configuraÁ„o desejada deve ser modificada aqui
+//Vari√°veis globais, configura√ß√£o desejada deve ser modificada aqui
 static const long M_SIZE = 100;
 static const long N_EXECUCOES = 1e3;
 
@@ -72,7 +72,7 @@ void benchmark(void(*execution_function)(Matrix& r, long long& tempo_ocorrido, c
     m2.set_random_matrix();
     r.set_default_matrix();
 
-    execution_function(r, tempo_ocorrido,A m1, m2);
+    execution_function(r, tempo_ocorrido, m1, m2);
     tempo_total += tempo_ocorrido;
   }
   std::cout << "\tAVG Time percorrido\t" << (double) tempo_total / N_EXECUCOES << " milisegundos" << std::endl;
@@ -105,14 +105,14 @@ void multiplicacao_linear(Matrix& r, const Matrix& m1, const Matrix& m2) {
 }
 
 void execucao_linear(Matrix& r, long long& tempo_ocorrido, const Matrix& m1, const Matrix& m2) {
-  //std::cout << "ComeÁando execuÁ„o linear" << std::endl;
+  //std::cout << "Come√ßando execu√ß√£o linear" << std::endl;
   long long tempo_de_inicio = tempo_atual();
 
   //std::cout << "Calculando..." << std::endl;
   multiplicacao_linear(r, m1, m2);
 
   long long tempo_de_termino = tempo_atual();
-  //std::cout << "Fim da execuÁ„o linear" << std::endl;
+  //std::cout << "Fim da execu√ß√£o linear" << std::endl;
 
   tempo_ocorrido = tempo_de_termino - tempo_de_inicio;
 }
